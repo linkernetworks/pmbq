@@ -1,0 +1,10 @@
+Package: pmbq
+Type: Package
+Title: Empirical Pokemon Dataset Stored In BigQuery
+Version: 0.1.0
+Author: Chih-Cheng Liang
+Maintainer: Chih-Cheng Liang <chihchengliang@gmail.com>
+Description: Empirical Pokemon Dataset Stored In BigQuery
+License: Commercial
+LazyData: TRUE
+RoxygenNote: 5.0.1
