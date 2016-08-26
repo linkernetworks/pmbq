@@ -1,10 +1,4 @@
-library(bigrquery)
-library(magrittr)
-library(dplyr)
-
-query <- function(sql){
-  query_exec(sql, project = "sunny-573") %>% tbl_df()
-}
+source("data-raw/util.R")
 
 sightings_grid <- "
   SELECT
@@ -18,6 +12,7 @@ sightings_grid <- "
       count(pokemonId) as cnt,
       date_created
     FROM [sunny-573:pokodata.gridview]
+    WHERE date_created BETWEEN '2016-08-24' AND '2016-08-25'
     GROUP BY cell_x, cell_y, date_created
   )
   GROUP BY cell_x, cell_y
