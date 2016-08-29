@@ -1,4 +1,5 @@
 source("data-raw/util.R")
+library(pokemongor)
 
 
 daily_pm_count <- "
@@ -12,7 +13,9 @@ LIMIT 1000" %>%
   query
 
 pm_freq <- daily_pm_count %>%
-  filter(date_created == "2016-08-25") %>%
+  filter(
+    date_created >= "2016-08-24" &
+    date_created <= "2016-08-28") %>%
   mutate(freq= cnt/sum(cnt)) %>%
   arrange(freq) %>%
   left_join(pokemon_names, by=c("pokemonId"="index")) %>%
