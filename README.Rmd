@@ -28,6 +28,13 @@ Datasets contained in this package:
 data(package="pmbq")$results %>% .[, c("Item", "Title")] %>% kable
 ```
 
+## Installation
+
+```{r eval=FALSE}
+# install.packages("devtools")
+devtools::install_github("LinkerNetworks/pmbq")
+```
+
 ## Usage
 
 Import the `pmbq` library, and start ruling the pokemon world!

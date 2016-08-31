@@ -14,6 +14,14 @@ Datasets contained in this package:
 | pm\_freq\_by\_hour      | Hourly Pokemon Sightings Frequencies              |
 | sightings\_grid\_latlon | Pokemon Sightings in Taiwan Grouped in Grid Cells |
 
+Installation
+------------
+
+``` r
+# install.packages("devtools")
+devtools::install_github("LinkerNetworks/pmbq")
+```
+
 Usage
 -----
 
