@@ -9,13 +9,15 @@ SELECT
   count(*) as cnt
 FROM [sunny-573:pokodata.gridview]
 GROUP BY pokemonId, date_created
-LIMIT 1000" %>%
+LIMIT 10000" %>%
   query
 
 pm_freq <- daily_pm_count %>%
   filter(
     date_created >= "2016-08-24" &
-    date_created <= "2016-08-28") %>%
+    date_created <= "2016-08-29") %>%
+  group_by(pokemonId) %>%
+  summarise(cnt=sum(cnt)) %>%
   mutate(freq= cnt/sum(cnt)) %>%
   arrange(freq) %>%
   left_join(pokemon_names, by=c("pokemonId"="index")) %>%

@@ -1,0 +1,40 @@
+---
+output: github_document
+---
+
+<!-- README.md is generated from README.Rmd. Please edit that file -->
+
+```{r, echo = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "",
+  fig.path = "README-"
+)
+```
+
+```{r , message=FALSE, echo=FALSE}
+library(bigrquery)
+library(magrittr)
+library(dplyr)
+library(knitr)
+library(pmbq)
+```
+
+```{r echo=FALSE}
+data(package="pmbq")$results %>% .[, c("Item", "Title")] %>% kable
+```
+
+```{r results='asis', echo=FALSE}
+data_sets<- data(package="pmbq")$results %>% .[,"Item"] 
+
+demo <- function(name_of_the_dataset){
+  paste0("head(", name_of_the_dataset, ")") %>% message()
+  name_of_the_dataset %>%
+    as.name %>% eval %>% head %>% kable %>% print
+}
+
+for (dataset in data_sets){
+  demo(dataset)
+}
+```
+
