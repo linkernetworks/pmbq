@@ -1,5 +1,10 @@
 
 <!-- README.md is generated from README.Rmd. Please edit that file -->
+Pokemon Sightings Data Stored in BigQuery
+=========================================
+
+Datasets contained in this package:
+
 | Item                    | Title                                             |
 |:------------------------|:--------------------------------------------------|
 | clefairy                | All Clefairy Sightings in Taipei City             |
@@ -8,6 +13,24 @@
 | pm\_freq                | Pokemon Sightings Frequencies                     |
 | pm\_freq\_by\_hour      | Hourly Pokemon Sightings Frequencies              |
 | sightings\_grid\_latlon | Pokemon Sightings in Taiwan Grouped in Grid Cells |
+
+Usage
+-----
+
+Import the `pmbq` library, and start ruling the pokemon world!
+
+``` r
+library(pmbq)
+library(magrittr)
+library(ggmap)
+
+clefairy %>% qmplot(x= longitude, y= latitude, data = .)
+```
+
+![](README-clefairy_demo-1.png)
+
+The Detail of The Dataset
+-------------------------
 
     head(clefairy)
 

@@ -20,9 +20,28 @@ library(knitr)
 library(pmbq)
 ```
 
+# Pokemon Sightings Data Stored in BigQuery
+
+Datasets contained in this package:
+
 ```{r echo=FALSE}
 data(package="pmbq")$results %>% .[, c("Item", "Title")] %>% kable
 ```
+
+## Usage
+
+Import the `pmbq` library, and start ruling the pokemon world!
+
+```{r clefairy_demo, message=FALSE}
+library(pmbq)
+library(magrittr)
+library(ggmap)
+
+clefairy %>% qmplot(x= longitude, y= latitude, data = .)
+```
+
+
+## The Detail of The Dataset
 
 ```{r results='asis', echo=FALSE}
 data_sets<- data(package="pmbq")$results %>% .[,"Item"] 
