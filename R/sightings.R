@@ -85,3 +85,30 @@
 #'  duplication during the collecting process.}
 #' }
 "dragonite"
+
+#' All Lickitung Sightings in Taiwan
+#'
+#' \describe{
+#'  \item{pokemonId}
+#'  \item{longitude}
+#'  \item{latitude}
+#'  \item{created}
+#'  \item{dup_cnt}{duplication count, ignore
+#'  this column since it was used to rule out the data
+#'  duplication during the collecting process.}
+#' }
+"lickitung"
+
+#' All Chansey Sightings in Taiwan
+#'
+#' \describe{
+#'  \item{pokemonId}
+#'  \item{longitude}
+#'  \item{latitude}
+#'  \item{created}
+#'  \item{dup_cnt}{duplication count, ignore
+#'  this column since it was used to rule out the data
+#'  duplication during the collecting process.}
+#' }
+"chansey"
+
