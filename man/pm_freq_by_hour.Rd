@@ -4,7 +4,7 @@
 \name{pm_freq_by_hour}
 \alias{pm_freq_by_hour}
 \title{Hourly Pokemon Sightings Frequencies}
-\format{An object of class \code{tbl_df} (inherits from \code{tbl}, \code{data.frame}) with 3353 rows and 4 columns.}
+\format{An object of class \code{tbl_df} (inherits from \code{tbl}, \code{data.frame}) with 3350 rows and 4 columns.}
 \usage{
 pm_freq_by_hour
 }

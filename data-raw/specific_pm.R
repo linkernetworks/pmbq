@@ -24,7 +24,20 @@ WHERE pokemonId =149 AND
 created >= '2016-08-24 00:00:00'
 " %>% query
 
+lickitung <- "SELECT *
+FROM [sunny-573:pokodata.by_block_occurrence]
+WHERE pokemonId =108 AND
+created >= '2016-08-24 00:00:00'
+" %>% query
+
+chansey <- "SELECT *
+FROM [sunny-573:pokodata.by_block_occurrence]
+WHERE pokemonId =113 AND
+created >= '2016-08-24 00:00:00'
+" %>% query
 
 devtools::use_data(clefairy, overwrite = T)
 devtools::use_data(snorlax, overwrite = T)
 devtools::use_data(dragonite, overwrite = T)
+devtools::use_data(lickitung, overwrite = T)
+devtools::use_data(chansey, overwrite = T)

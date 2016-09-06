@@ -7,6 +7,7 @@ SELECT
   hour_created,
   count(*) as cnt
 FROM [sunny-573:pokodata.gridview]
+WHERE date_created BETWEEN '2016-08-24' AND '2016-08-29'
 GROUP BY pokemonId, hour_created
 LIMIT 10000" %>%
   query
